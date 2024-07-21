@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    
+    <script src="//unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js" ></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js" crossorigin="anonymous"></script>
+    <title>Body Scanner</title>
+</head>
+<body>
+    <a-scene id = "scene">
+        <a-assets>
+            <a-asset-item id="humanbody" src="./skeleton/scene.gltf">
+            <a-asset-item id="brain" src="./brain/scene.gltf">
+            <a-asset-item id="heart" src="./heart/scene.gltf">
+            <a-asset-item id="intestine" src="./intestine/scene.gltf">
+            <a-asset-item id="stomach" src="./stomach/scene.gltf">
+            <a-asset-item id="ribcage" src="./ribcage/scene.gltf">
+            <a-asset-item id="kidney" src="./kidney/scene.gltf">
+            <a-asset-item id="digestive" src="./realisStomach/scene.gltf">
+            </a-asset-item>
+        </a-assets>
+        <a-entity id="environment" environment="skyType:gradient; lighting:point" ></a-entity>
+        <a-entity id="body" gltf-model="#humanbody" position="0 0 -2" scale="0.01 0.01 0.01"></a-entity>
+        <a-entity id="Dbrain" gltf-model="#brain" position="2 2 -2" scale="0.001 0.001 0.001"></a-entity>
+        <a-entity id="Dheart" gltf-model="#heart" position="4 2 -2" scale="1 1 1"></a-entity>
+        <a-entity id="Dintestine" gltf-model="#intestine" position="6 2 -2" scale="1 1 1"></a-entity>
+        <a-entity id="Dstomach" gltf-model="#stomach" position="8 2 -2" scale="0.1 0.1 0.1"></a-entity>
+        <a-entity id="Dribcage" gltf-model="#ribcage" position="16 2 -2" scale="0.09 0.09 0.09"></a-entity>
+        <a-entity id="Dkidney" gltf-model="#kidney" position="12 2 -2" scale="15 15 15"></a-entity>
+        <a-entity id="Ddigestive" gltf-model="#digestive" position="10 2 -2" scale="1 1 1"></a-entity>
+        
+    </a-scene>
+</body>
+</html>
