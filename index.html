@@ -7,10 +7,11 @@
     
     <script src="//unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js" ></script>
     <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js" crossorigin="anonymous"></script>
+    <script src="home.js"></script>
     <title>Body Scanner</title>
 </head>
 <body>
-    <a-scene id = "scene">
+    <a-scene id = "scene" >
         <a-assets>
             <a-asset-item id="humanbody" src="./skeleton/scene.gltf">
             <a-asset-item id="brain" src="./brain/scene.gltf">
@@ -22,15 +23,46 @@
             <a-asset-item id="digestive" src="./realisStomach/scene.gltf">
             </a-asset-item>
         </a-assets>
-        <a-entity id="environment" environment="skyType:gradient; lighting:point" ></a-entity>
-        <a-entity id="body" gltf-model="#humanbody" position="0 0 -2" scale="0.01 0.01 0.01"></a-entity>
-        <a-entity id="Dbrain" gltf-model="#brain" position="2 2 -2" scale="0.001 0.001 0.001"></a-entity>
-        <a-entity id="Dheart" gltf-model="#heart" position="4 2 -2" scale="1 1 1"></a-entity>
-        <a-entity id="Dintestine" gltf-model="#intestine" position="6 2 -2" scale="1 1 1"></a-entity>
-        <a-entity id="Dstomach" gltf-model="#stomach" position="8 2 -2" scale="0.1 0.1 0.1"></a-entity>
-        <a-entity id="Dribcage" gltf-model="#ribcage" position="16 2 -2" scale="0.09 0.09 0.09"></a-entity>
-        <a-entity id="Dkidney" gltf-model="#kidney" position="12 2 -2" scale="15 15 15"></a-entity>
-        <a-entity id="Ddigestive" gltf-model="#digestive" position="10 2 -2" scale="1 1 1"></a-entity>
+        <a-entity id="environment" environment="skyType:gradient; lighting:point" cursor="rayOrigin:mouse" cursor-handler></a-entity>
+        <a-entity id="body" gltf-model="#humanbody" position="0 0 -5" scale="0.03 0.03 0.03" visible="true" ></a-entity>
+        <a-entity id="bbrain"  position="0.7 5.5 -5">
+        <a-plane  color="teal" width="1" height="0.5">
+            <a-text value="Brain" position="-0.5 0 0"></a-text>
+        </a-plane>
+        </a-entity>
+        <a-entity id="bheart"  position="0.7 4.5 -5">
+            <a-plane  color="teal" width="1" height="0.5">
+                <a-text value="Heart" position="-0.5 0 0"></a-text>
+            </a-plane>
+        </a-entity>
+        <a-entity id="bintestine"  position="0.7 3.1 -5">
+            <a-plane  color="teal" width="1" height="0.3">
+                <a-text value="Intestine" position="-0.5 0 0"></a-text>
+            </a-plane>
+        </a-entity>
+        <a-entity id="bstomach"  position="0 3.5 -5">
+            <a-plane  color="teal" width="1" height="0.3">
+                <a-text value="Stomach" position="-0.5 0 0"></a-text>
+            </a-plane>
+        </a-entity>
+        <a-entity id="bkidney"  position="-0.7 3.1 -5">
+            <a-plane  color="teal" width="1" height="0.3">
+                <a-text value="Kidney" position="-0.5 0 0"></a-text>
+            </a-plane>
+        </a-entity>
+        <a-entity id="Dbrain" gltf-model="#brain" visible = 'false'></a-entity>
+        <a-entity id="Dheart" gltf-model="#heart" visible = 'false'></a-entity>
+        <a-entity id="Dintestine" gltf-model="#intestine" visible = 'false'></a-entity>
+        <a-entity id="Dstomach" gltf-model="#stomach" visible = 'false'></a-entity>
+        <a-entity id="Dribcage" gltf-model="#ribcage" visible = 'false'></a-entity>
+        <a-entity id="Dkidney" gltf-model="#kidney" visible = 'false'></a-entity>
+        <a-entity id="Ddigestive" gltf-model="#digestive" visible = 'false'></a-entity>
+
+
+
+
+
+        
         
     </a-scene>
 </body>
